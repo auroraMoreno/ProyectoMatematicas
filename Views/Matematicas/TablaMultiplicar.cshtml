@@ -1,0 +1,30 @@
+﻿@model List<int>
+<h1>Tabla de multiplicar</h1>
+
+<form method="post">
+    <label>Numero:</label>
+    <input type="number" name="numero"/>
+    <br/>
+    <button>Multiplicar</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Operación</th>
+            <th>Resultado</th>
+        </tr>
+    </thead>
+    @if (Model != null)
+    {
+    <tbody>
+        @foreach (int i in Model)
+        {
+            <tr>
+                <td>@i * @ViewBag.Numero = </td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+    }
+</table>
